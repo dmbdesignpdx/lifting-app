@@ -1,0 +1,13 @@
+import type { %%#Props as Props } from "./types.d";
+import { %%#Styles } from "./%%#.styles";
+
+
+export function %%#({}: Props) {
+  const className = %%#Styles();
+
+  return (
+    <#%% className={className}>
+      %%# Component
+    </#%%>
+  );
+}

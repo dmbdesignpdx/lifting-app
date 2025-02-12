@@ -1,0 +1,18 @@
+node_modules/
+coverage/
+.next/
+out/
+build/
+.idea/
+.DS_Store
+*.pem
+npm-debug.log*
+.pnpm-debug.log*
+.env*
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+## Panda
+styled-system/
+styled-system-studio/

@@ -1,0 +1,10 @@
+import { cva } from "@/styled-system/css";
+
+
+export const %%#Styles = cva({
+  base: {
+    contain: "content",
+  },
+  variants: {},
+  defaultVariants: {},
+});

@@ -1,0 +1,13 @@
+import { test, expect } from "bun:test";
+import { screen, render } from "@testing-library/react";
+
+import { %%# } from "./%%#";
+
+
+test("%%# renders correctly", () => {
+  render(<%%# />);
+
+  const root = screen.getByText("%%# Component");
+
+  expect(root).toBeInTheDocument();
+});
