@@ -14,10 +14,6 @@ export const table = css({
 
 export const containerStyles = css({
   marginBlockStart: 12,
-  marginInline: "auto",
-  paddingInline: 6,
-  inlineSize: "100%",
-  maxInlineSize: "540px",
 });
 
 export const cellStyles = css({

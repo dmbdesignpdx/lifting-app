@@ -27,8 +27,8 @@ export function Table({ state }: Props) {
     <article className={style.containerStyles}>
       <h3>Amounts</h3>
       <table
-        aria-live="assertive"
         className={style.table}
+        aria-live="assertive"
       >
         <thead>
           <tr>

@@ -24,7 +24,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={`${geistMono.className}`}>
+      <body
+        className={`${geistMono.className}`}
+        data-wrap
+      >
         <Header heading={Label.HEADING} />
         <main>{children}</main>
         <footer>

@@ -5,7 +5,20 @@ export default defineConfig({
   preflight: true,
   include: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{ts,tsx}"],
   exclude: [],
-  globalCss: {},
+  globalCss: {
+    "[data-wrap]": {
+      marginInline: "auto",
+      paddingInline: 4,
+      inlineSize: "100%",
+      maxInlineSize: "42rem",
+    },
+    "[data-sr]": {
+      position: "absolute",
+      width: 0,
+      height: 0,
+      overflow: "hidden",
+    },
+  },
   theme: {
     extend: {
       tokens: {
