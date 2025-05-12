@@ -7,13 +7,13 @@ export const ButtonStyles = cva({
     minBlockSize: "ui",
     fontWeight: "bold",
     borderRadius: 5,
-    paddingInline: 4,
     paddingBlock: 2,
     marginBlockStart: 6,
   },
   variants: {
     variant: {
       solid: {
+        paddingInline: 4,
         bgColor: "primary",
         color: "white",
         _hover: {
