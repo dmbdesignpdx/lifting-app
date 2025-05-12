@@ -90,6 +90,12 @@ export default defineConfig({
               description: "The text color on a background.",
             },
           },
+          border: {
+            value: {
+              base: "{colors.slate.200}",
+              _dark: "{colors.slate.700}",
+            },
+          },
         },
       },
     },

@@ -9,7 +9,7 @@ export const Name = {
 } as const;
 
 export const Label = {
-  GOAL: "PR GOAL",
+  GOAL: "GOAL",
   BREAKDOWN: "Breakdown",
   PROMPT: "Start by entering your current PRs",
   CALCULATE: "Calculate",

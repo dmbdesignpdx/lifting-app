@@ -7,8 +7,13 @@ export const table = css({
   textAlign: "left",
   tableLayout: "fixed",
 
+  "& tr": {
+    borderBottom: "1px solid {colors.border}",
+  },
+
   "& th": {
     fontSize: ".75rem",
+    paddingBlock: 4,
   },
 });
 
@@ -21,7 +26,7 @@ export const cellStyles = css({
     paddingBlock: 4,
   },
   "&:first-of-type": {
-    color: "primary",
     fontWeight: "bold",
+    color: "teal.500",
   },
 });
