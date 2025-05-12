@@ -6,6 +6,13 @@ export default defineConfig({
   include: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{ts,tsx}"],
   exclude: [],
   globalCss: {
+    "p a": {
+      color: "primary",
+      fontWeight: "bold",
+      _hover: {
+        textDecoration: "underline",
+      },
+    },
     "[data-wrap]": {
       marginInline: "auto",
       paddingInline: 4,

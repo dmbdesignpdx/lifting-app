@@ -5,6 +5,7 @@ import { Geist_Mono } from "next/font/google";
 
 // Ours
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Label } from "@/constants";
 import "./globals.css";
 
@@ -30,9 +31,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       >
         <Header heading={Label.HEADING} />
         <main>{children}</main>
-        <footer>
-          <h3>Footer</h3>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
