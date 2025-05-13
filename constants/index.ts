@@ -14,6 +14,8 @@ export const Label = {
   PROMPT: "Start by entering your current PRs",
   CALCULATE: "Calculate",
   HEADING: "Olympic Lifting Calculator",
+  SHOW_CALC: "Show Calculator",
+  HIDE_CALC: "Hide Calculator",
 } as const;
 
 export const INITIAL_DATA = {

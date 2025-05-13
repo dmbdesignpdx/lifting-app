@@ -1,19 +1,36 @@
 import type { FooterProps as Props } from "./types.d";
-import * as Style from "./Footer.styles";
-
+import * as style from "./Footer.styles";
+import { Link } from "@/components/Link";
 
 export function Footer({}: Props) {
 
   return (
-    <footer className={Style.ROOT}>
+    <footer className={style.root}>
       <p>
         Made with 🦄🌈 by
         {" "}
-        <a href="https://danielblake.dev">Daniel Blake</a> using
+        <Link
+          href="https://danielblake.dev"
+          label="Daniel Blake"
+          newTab
+        />
         {" "}
-        <a href="https://nextjs.org">Next.js</a> and
+        using
         {" "}
-        <a href="https://panda-css.com">Panda CSS</a>.
+        <Link
+          href="https://nextjs.org"
+          label="Next.js"
+          newTab
+        />
+        {" "}
+        and
+        {" "}
+        <Link
+          href="https://panda-css.com"
+          label="Panda CSS"
+          newTab
+        />
+        .
       </p>
       <p><small>Copyright 2025 Daniel Blake.</small></p>
     </footer>

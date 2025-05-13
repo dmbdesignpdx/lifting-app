@@ -1,7 +1,7 @@
 import type { Lift } from "@/types/main";
 
 
-export type CurrentStateProps = {
+export interface CurrentStateProps {
   state: Lift;
   children?: never;
-};
+}

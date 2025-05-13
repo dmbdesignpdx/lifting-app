@@ -1,7 +1,7 @@
 import { css } from "@/styled-system/css";
 
 
-export const InputStyles = css({
+export const root = css({
   contain: "content",
   minBlockSize: "ui",
   border: "2px solid {colors.background}",
@@ -10,7 +10,7 @@ export const InputStyles = css({
   paddingBlock: 2,
 });
 
-export const LabelStyles = css({
+export const label = css({
   contain: "content",
   display: "flex",
   flexFlow: "column wrap",

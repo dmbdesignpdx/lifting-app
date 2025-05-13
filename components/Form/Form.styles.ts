@@ -1,7 +1,7 @@
 import { css } from "@/styled-system/css";
 
 
-export const FormStyles = css({
+export const root = css({
   contain: "content",
   marginBlockStart: 9,
 });

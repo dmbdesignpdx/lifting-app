@@ -1,7 +1,7 @@
 import { cva } from "@/styled-system/css";
 
 
-export const ButtonStyles = cva({
+export const root = cva({
   base: {
     contain: "content",
     minBlockSize: "ui",
@@ -16,15 +16,20 @@ export const ButtonStyles = cva({
         paddingInline: 4,
         bgColor: "primary",
         color: "white",
-        _hover: {
+        _pointer: {
           bgColor: "primary.action",
+        },
+        _touch: {
+          transform: "scale(0.95)",
         },
       },
       text: {
-        bgColor: "transparent",
         color: "primary",
-        _hover: {
+        _pointer: {
           color: "primary.action",
+        },
+        _touch: {
+          transform: "scale(0.95)",
         },
       },
     },

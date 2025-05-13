@@ -24,10 +24,10 @@ export function Table({ state }: Props) {
   }
 
   return (
-    <article className={style.containerStyles}>
+    <article className={style.container}>
       <h3>Amounts</h3>
       <table
-        className={style.table}
+        className={style.root}
         aria-live="assertive"
       >
         <thead>
@@ -42,7 +42,7 @@ export function Table({ state }: Props) {
           {getValues().map(i => (
             <tr
               key={i.label}
-              className={style.cellStyles}
+              className={style.cell}
             >
               <td>{i.label}</td>
               <td>{i.lift[Name.SNATCH]}kg</td>

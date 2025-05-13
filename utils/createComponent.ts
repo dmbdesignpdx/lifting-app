@@ -35,12 +35,12 @@ async function replaceText(file: BunFile) {
 const types = await replaceText(_types);
 const component = await replaceText(_component);
 const test = await replaceText(_test);
-const styles = await replaceText(_styles);
+// const styles = await replaceText(_styles);
 const index = await replaceText(_index);
 
 
 await Bun.write(`${PATH}/${name}/${name}.tsx`, component.replaceAll("#%%", values.element));
-await Bun.write(`${PATH}/${name}/${name}.styles.ts`, styles);
+await Bun.write(`${PATH}/${name}/${name}.styles.ts`, _styles);
 await Bun.write(`${PATH}/${name}/${name}.test.tsx`, test);
 await Bun.write(`${PATH}/${name}/types.d.ts`, types);
 await Bun.write(`${PATH}/${name}/index.ts`, index);

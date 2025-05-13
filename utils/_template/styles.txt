@@ -1,10 +1,17 @@
-import { cva } from "@/styled-system/css";
+import { css } from "@/styled-system/css";
+// import { cva } from "@/styled-system/css";
 
 
-export const %%#Styles = cva({
+export const root = css({
+  contain: "content",
+});
+
+/*
+export const root = cva({
   base: {
     contain: "content",
   },
   variants: {},
   defaultVariants: {},
 });
+*/

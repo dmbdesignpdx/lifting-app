@@ -6,13 +6,6 @@ export default defineConfig({
   include: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{ts,tsx}"],
   exclude: [],
   globalCss: {
-    "p a": {
-      color: "primary",
-      fontWeight: "bold",
-      _hover: {
-        textDecoration: "underline",
-      },
-    },
     "[data-wrap]": {
       marginInline: "auto",
       paddingInline: 4,
@@ -24,6 +17,12 @@ export default defineConfig({
       width: 0,
       height: 0,
       overflow: "hidden",
+    },
+  },
+  conditions: {
+    extend: {
+      pointer: ["@media (hover: hover) and (pointer: fine)", "&:hover, &:focus-visible"],
+      touch: ["@media (hover: none)", "&:active"],
     },
   },
   theme: {

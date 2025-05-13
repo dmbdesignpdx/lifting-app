@@ -13,6 +13,7 @@ import { Table } from "@/components/Table";
 import { CurrentState } from "@/components/CurrentState";
 import { useLiftState } from "@/hooks/useLiftState";
 import { Button } from "@/components/Button";
+import { Label } from "@/constants";
 
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
   const [getLiftState, setLiftState] = useLiftState();
   const [state, formAction] = useActionState(setLiftState, getLiftState());
   const [showCalc, setShowCalc] = useState(true);
-  const buttonLabel = showCalc ? "Hide Calculator" : "Show Calculator";
+  const buttonLabel = showCalc ? Label.HIDE_CALC : Label.SHOW_CALC;
 
   function handleClick() {
     setShowCalc(prev => !prev);

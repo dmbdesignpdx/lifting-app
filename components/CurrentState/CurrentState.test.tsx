@@ -5,10 +5,12 @@ import { CurrentState } from "./CurrentState";
 import { INITIAL_DATA } from "@/constants";
 
 
-test.skip("CurrentState renders correctly", () => {
+test("CurrentState renders correctly", async () => {
   render(<CurrentState state={INITIAL_DATA} />);
 
-  const root = screen.getByText("Current PRs:");
+  const root = await screen.findByRole("article");
+  const heading = await screen.findByRole("heading");
 
-  expect(root).toBeInTheDocument();
+  expect(root).toHaveAccessibleName("Current PRs");
+  expect(heading).toHaveTextContent("Current PRs");
 });

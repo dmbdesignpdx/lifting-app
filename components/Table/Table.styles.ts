@@ -1,7 +1,7 @@
 import { css } from "@/styled-system/css";
 
 
-export const table = css({
+export const root = css({
   contain: "content",
   inlineSize: "100%",
   textAlign: "left",
@@ -17,11 +17,11 @@ export const table = css({
   },
 });
 
-export const containerStyles = css({
+export const container = css({
   marginBlockStart: 12,
 });
 
-export const cellStyles = css({
+export const cell = css({
   "& td": {
     paddingBlock: 4,
   },

@@ -1,5 +1,5 @@
 import type { FormProps as Props } from "./types.d";
-import { FormStyles } from "./Form.styles";
+import * as style from "./Form.styles";
 import { Input } from "@/components/Input";
 import { Label, Name } from "@/constants";
 import { Button } from "@/components/Button";
@@ -11,7 +11,7 @@ export function Form({ action }: Props) {
     <section>
       <h3>Enter your current PRs</h3>
       <form
-        className={FormStyles}
+        className={style.root}
         action={action}
         data-testid="form"
       >

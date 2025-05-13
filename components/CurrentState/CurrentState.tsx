@@ -1,17 +1,20 @@
 import type { CurrentStateProps as Props } from "./types.d";
-import { CurrentStateStyles } from "./CurrentState.styles";
+import * as style from "./CurrentState.styles";
 import { Name } from "@/constants";
 
 
 export function CurrentState({ state }: Props) {
 
   return (
-    <article className={CurrentStateStyles}>
-      <h3>Current PRs</h3>
+    <article
+      className={style.root}
+      aria-labelledby="article"
+    >
+      <h3 id="article">Current PRs</h3>
       <ul>
-        <li>{Name.SNATCH}: {state.Snatch}kg</li>
-        <li>{Name.CLEAN_JERK}: {state[Name.CLEAN_JERK]}kg</li>
-        <li>{Name.BACK_SQUAT}: {state[Name.BACK_SQUAT]}kg</li>
+        <li>{Name.SNATCH}: <span>{state.Snatch}kg</span></li>
+        <li>{Name.CLEAN_JERK}: <span>{state[Name.CLEAN_JERK]}kg</span></li>
+        <li>{Name.BACK_SQUAT}: <span>{state[Name.BACK_SQUAT]}kg</span></li>
       </ul>
     </article>
   );

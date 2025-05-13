@@ -9,7 +9,7 @@ import {
 } from "@/constants";
 
 
-type LiftStateFuncs = [typeof getter, typeof setter];
+type LiftStateFunctions = [typeof getter, typeof setter];
 
 
 function setter(_: Lift, formData: FormData): Lift {
@@ -39,6 +39,6 @@ function getter(): Lift {
 }
 
 
-export function useLiftState(): LiftStateFuncs {
+export function useLiftState(): LiftStateFunctions {
   return [getter, setter];
 }

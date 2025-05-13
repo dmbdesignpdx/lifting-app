@@ -1,7 +1,7 @@
 import { css } from "@/styled-system/css";
 
 
-export const ROOT = css({
+export const root = css({
   contain: "content",
-  paddingBlock: 8,
+  paddingBlock: 12,
 });

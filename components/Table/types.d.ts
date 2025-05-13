@@ -1,7 +1,7 @@
 import type { Lift } from "@/types/main";
 
 
-export type TableProps = {
+export interface TableProps {
   state: Lift;
   children?: never;
-};
+}

@@ -1,3 +1,3 @@
-export type FooterProps = {
+export interface FooterProps {
   children?: never;
-};
+}

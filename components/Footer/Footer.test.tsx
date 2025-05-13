@@ -9,10 +9,10 @@ import { Footer } from "./Footer";
 
 
 describe("Footer Component", () => {
-  test("renders its content correctly", () => {
+  test("renders its content correctly", async () => {
     render(<Footer />);
 
-    const root = screen.getByText("Footer Component");
+    const root = await screen.findByRole("contentinfo");
 
     expect(root).toBeInTheDocument();
   });

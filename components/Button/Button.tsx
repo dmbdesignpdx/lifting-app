@@ -1,5 +1,5 @@
 import type { ButtonProps as Props } from "./types.d";
-import { ButtonStyles } from "./Button.styles";
+import * as style from "./Button.styles";
 
 
 export function Button({
@@ -10,7 +10,7 @@ export function Button({
 }: Props) {
   if (!label) return null;
 
-  const className = ButtonStyles({ variant });
+  const className = style.root({ variant });
 
   return (
     <button

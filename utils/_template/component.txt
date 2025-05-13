@@ -1,9 +1,9 @@
 import type { %%#Props as Props } from "./types.d";
-import { %%#Styles } from "./%%#.styles";
+import * as style from "./%%#.styles";
 
 
 export function %%#({}: Props) {
-  const className = %%#Styles();
+  const className = style.root();
 
   return (
     <#%% className={className}>

@@ -4,10 +4,10 @@ import { screen, render } from "@testing-library/react";
 import { %%# } from "./%%#";
 
 
-test("%%# renders correctly", () => {
+test("%%# renders correctly", async () => {
   render(<%%# />);
 
-  const root = screen.getByText("%%# Component");
+  const root = await screen.findByText("%%# Component");
 
   expect(root).toBeInTheDocument();
 });

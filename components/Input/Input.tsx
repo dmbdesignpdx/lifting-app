@@ -1,5 +1,5 @@
 import type { InputProps as Props } from "./types.d";
-import { InputStyles, LabelStyles } from "./Input.styles";
+import * as style from "./Input.styles";
 
 export function Input({
   label,
@@ -8,13 +8,12 @@ export function Input({
   onChange,
 }: Props) {
   if (!label) return null;
-  // const className = InputRecipe;
 
   return (
-    <label className={LabelStyles}>
+    <label className={style.label}>
       <span>{label}</span>
       <input
-        className={InputStyles}
+        className={style.root}
         id={label}
         type="number"
         name={label}

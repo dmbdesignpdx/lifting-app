@@ -1,4 +1,4 @@
-export type HeaderProps = {
+export interface HeaderProps {
   heading: string;
   children?: never;
-};
+}
