@@ -48,14 +48,14 @@ export default defineConfig({
             DEFAULT: {
               value: {
                 base: "{colors.purple.500}",
-                _dark: "{colors.purple.50}",
+                _osDark: "{colors.purple.500}",
               },
               description: "The primary color for UI elements.",
             },
             action: {
               value: {
                 base: "{colors.purple.400}",
-                _dark: "{colors.purple.100}",
+                _osDark: "{colors.purple.100}",
               },
               description: "The primary color on hover or focus.",
             },
@@ -64,14 +64,14 @@ export default defineConfig({
             DEFAULT: {
               value: {
                 base: "{colors.slate.50}",
-                _dark: "{colors.slate.800}",
+                _osDark: "{colors.slate.800}",
               },
               description: "A level above background, like a card or a modal.",
             },
             text: {
               value: {
                 base: "{colors.neutral.800}",
-                _dark: "{colors.neutral.50}",
+                _osDark: "{colors.neutral.50}",
               },
               description: "The text color on a surface.",
             },
@@ -80,19 +80,19 @@ export default defineConfig({
             DEFAULT: {
               value: {
                 base: "{colors.zinc.100}",
-                _dark: "{colors.zinc.800}",
+                _osDark: "{colors.zinc.800}",
               },
               description: "A lowest level, like the body or a container.",
             },
             text: {
-              value: { base: "{colors.neutral.900}", _dark: "" },
+              value: { base: "{colors.neutral.900}", _osDark: "" },
               description: "The text color on a background.",
             },
           },
           border: {
             value: {
               base: "{colors.slate.200}",
-              _dark: "{colors.slate.700}",
+              _osDark: "{colors.slate.700}",
             },
           },
         },
