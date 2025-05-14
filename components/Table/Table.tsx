@@ -24,13 +24,17 @@ export function Table({ state }: Props) {
   }
 
   return (
-    <article className={style.container}>
-      <h3>Amounts</h3>
+    <article
+      className={style.container}
+      aria-labelledby="table-heading"
+    >
+      <h3 id="table-heading">{Label.AMOUNTS}</h3>
       <table
         className={style.root}
         aria-live="assertive"
+        aria-label="Table"
       >
-        <thead>
+        <thead aria-label={Label.TABLE_HEADER}>
           <tr>
             <th>{Label.BREAKDOWN}</th>
             <th>{Name.SNATCH}</th>
@@ -38,7 +42,7 @@ export function Table({ state }: Props) {
             <th>{Name.BACK_SQUAT}</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody aria-label={Label.TABLE_BODY}>
           {getValues().map(i => (
             <tr
               key={i.label}

@@ -16,6 +16,9 @@ export const Label = {
   HEADING: "Olympic Lifting Calculator",
   SHOW_CALC: "Show Calculator",
   HIDE_CALC: "Hide Calculator",
+  AMOUNTS: "Amounts",
+  TABLE_HEADER: "Table Header",
+  TABLE_BODY: "Table Body",
 } as const;
 
 export const INITIAL_DATA = {
