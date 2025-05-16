@@ -5,6 +5,18 @@ export default defineConfig({
   preflight: true,
   include: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{ts,tsx}"],
   exclude: [],
+  globalVars: {
+    "--start": {
+      syntax: "<color>",
+      inherits: false,
+      initialValue: "#a855f7",
+    },
+    "--end": {
+      syntax: "<color>",
+      inherits: false,
+      initialValue: "#ec4899",
+    },
+  },
   globalCss: {
     "[data-wrap]": {
       marginInline: "auto",
@@ -25,8 +37,8 @@ export default defineConfig({
   },
   conditions: {
     extend: {
-      pointer: ["@media (hover: hover) and (pointer: fine)", "&:hover, &:focus-visible"],
-      touch: ["@media (hover: none)", "&:active"],
+      pointer: ["@media (min-width:769px)", "&:hover, &:focus-visible"],
+      touch: ["@media (max-width:768)", "&:active"],
     },
   },
   theme: {
@@ -50,18 +62,24 @@ export default defineConfig({
         colors: {
           primary: {
             DEFAULT: {
-              value: {
-                base: "{colors.purple.500}",
-                _osDark: "{colors.purple.500}",
-              },
+              value: "{colors.purple.500}",
               description: "The primary color for UI elements.",
             },
             action: {
-              value: {
-                base: "{colors.purple.400}",
-                _osDark: "{colors.purple.100}",
-              },
+              value: "{colors.purple.400}",
               description: "The primary color on hover or focus.",
+            },
+            accent: {
+              value: "{colors.pink.500}",
+            },
+          },
+          secondary: {
+            DEFAULT: {
+              value: "{colors.teal.500}",
+              description: "The secondary color for UI elements.",
+            },
+            accent: {
+              value: "{colors.blue.500}",
             },
           },
           surface: {

@@ -23,6 +23,20 @@ export const root = cva({
           transform: "scale(0.95)",
         },
       },
+      gradient: {
+        "--start": "colors.primary",
+        "--end": "colors.primary.accent",
+        paddingInline: 4,
+        bg: "linear-gradient(90deg, var(--start) 10%, var(--end) 100%)",
+        color: "white",
+        _pointer: {
+          "--end": "var(--start)",
+          transition: "--end 0.4s ease-out",
+        },
+        _touch: {
+          transform: "scale(0.95)",
+        },
+      },
       text: {
         color: "primary",
         _pointer: {

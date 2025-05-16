@@ -12,7 +12,7 @@ export const root = css({
   },
 
   "& th": {
-    fontSize: ".75rem",
+    fontSize: "0.75rem",
     paddingBlock: 4,
   },
 });
@@ -25,8 +25,9 @@ export const cell = css({
   "& td": {
     paddingBlock: 4,
   },
+
   "&:first-of-type": {
     fontWeight: "bold",
-    color: "teal.500",
+    color: "secondary",
   },
 });

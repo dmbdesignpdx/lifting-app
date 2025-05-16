@@ -19,7 +19,10 @@ export function Form({ action }: Props) {
         <Input label={Lift.Clean.NAME} />
         <Input label={Lift.Back.NAME} />
         <Input label={Lift.Front.NAME} />
-        <Button label={Label.CALCULATE} />
+        <Button
+          label={Label.CALCULATE}
+          variant="gradient"
+        />
       </form>
     </section>
   );
