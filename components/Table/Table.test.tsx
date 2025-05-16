@@ -7,7 +7,7 @@ import { Table } from "./Table";
 import {
   INITIAL_DATA,
   Label,
-  Name,
+  Lift,
   PERCENTAGES,
 } from "@/constants";
 
@@ -16,9 +16,9 @@ const { getByRole, getAllByRole } = screen;
 
 const columnHeaders = [
   Label.BREAKDOWN,
-  Name.SNATCH,
-  Name.CLEAN_JERK,
-  Name.BACK_SQUAT,
+  Lift.Snatch.NAME,
+  Lift.Clean.NAME,
+  Lift.Back.NAME,
 ];
 const totalCells = PERCENTAGES.length * columnHeaders.length;
 

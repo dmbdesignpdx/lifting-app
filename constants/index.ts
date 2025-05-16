@@ -2,10 +2,23 @@ export const PERCENTAGES =
   Array.from({ length: 11 }, (_, i) => 100 - i * 5);
 export const LOCAL_KEY = "_lifting-data_";
 
-export const Name = {
-  SNATCH: "Snatch",
-  CLEAN_JERK: "Clean & Jerk",
-  BACK_SQUAT: "Back Squat",
+export const Lift = {
+  Snatch: {
+    NAME: "Snatch",
+    ICON: "🍕",
+  },
+  Clean: {
+    NAME: "Clean & Jerk",
+    ICON: "🌮",
+  },
+  Back: {
+    NAME: "Back Squat",
+    ICON: "🥪",
+  },
+  Front: {
+    NAME: "Front Squat",
+    ICON: "🌭",
+  },
 } as const;
 
 export const Label = {
@@ -22,7 +35,8 @@ export const Label = {
 } as const;
 
 export const INITIAL_DATA = {
-  [Name.SNATCH]: 0,
-  [Name.CLEAN_JERK]: 0,
-  [Name.BACK_SQUAT]: 0,
+  [Lift.Snatch.NAME]: 0,
+  [Lift.Clean.NAME]: 0,
+  [Lift.Back.NAME]: 0,
+  [Lift.Front.NAME]: 0,
 };

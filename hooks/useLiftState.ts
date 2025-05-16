@@ -1,9 +1,9 @@
 "use client";
 
 
-import type { Lift } from "@/types/main";
+import type { LiftState } from "@/types/main";
 import {
-  Name,
+  Lift,
   INITIAL_DATA,
   LOCAL_KEY,
 } from "@/constants";
@@ -12,11 +12,12 @@ import {
 type LiftStateFunctions = [typeof getter, typeof setter];
 
 
-function setter(_: Lift, formData: FormData): Lift {
+function setter(_: LiftState, formData: FormData): LiftState {
   const data = ({
-    [Name.SNATCH]: Number(formData.get(Name.SNATCH)) || 0,
-    [Name.CLEAN_JERK]: Number(formData.get(Name.CLEAN_JERK)) || 0,
-    [Name.BACK_SQUAT]: Number(formData.get(Name.BACK_SQUAT)) || 0,
+    [Lift.Snatch.NAME]: Number(formData.get(Lift.Snatch.NAME)) || 0,
+    [Lift.Clean.NAME]: Number(formData.get(Lift.Clean.NAME)) || 0,
+    [Lift.Back.NAME]: Number(formData.get(Lift.Back.NAME)) || 0,
+    [Lift.Front.NAME]: Number(formData.get(Lift.Front.NAME)) || 0,
   });
 
   if (typeof window !== "undefined") {
@@ -26,7 +27,7 @@ function setter(_: Lift, formData: FormData): Lift {
   return data;
 }
 
-function getter(): Lift {
+function getter(): LiftState {
   if (typeof window !== "undefined") {
     const a = window.localStorage.getItem(LOCAL_KEY);
 

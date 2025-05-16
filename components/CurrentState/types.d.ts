@@ -1,7 +1,7 @@
-import type { Lift } from "@/types/main";
+import type { LiftState } from "@/types/main";
 
 
 export interface CurrentStateProps {
-  state: Lift;
+  state: LiftState;
   children?: never;
 }

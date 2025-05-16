@@ -1,6 +1,8 @@
 import type { CurrentStateProps as Props } from "./types.d";
 import * as style from "./CurrentState.styles";
-import { Name } from "@/constants";
+import { Lift } from "@/constants";
+
+const lifts = Object.values(Lift);
 
 
 export function CurrentState({ state }: Props) {
@@ -12,9 +14,15 @@ export function CurrentState({ state }: Props) {
     >
       <h3 id="article">Current PRs</h3>
       <ul>
-        <li>{Name.SNATCH}: <span>{state.Snatch}kg</span></li>
-        <li>{Name.CLEAN_JERK}: <span>{state[Name.CLEAN_JERK]}kg</span></li>
-        <li>{Name.BACK_SQUAT}: <span>{state[Name.BACK_SQUAT]}kg</span></li>
+
+        {lifts.map(lift => (
+          <li key={lift.NAME}>
+            {lift.NAME} ({lift.ICON}):
+            {" "}
+            <span>{state[lift.NAME]}kg</span>
+          </li>
+        ))}
+
       </ul>
     </article>
   );

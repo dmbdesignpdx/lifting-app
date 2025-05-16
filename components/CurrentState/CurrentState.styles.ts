@@ -13,6 +13,10 @@ export const root = css({
     marginBlockStart: 4,
   },
 
+  "& li": {
+    marginBlockStart: 1,
+  },
+
   "& span": {
     fontWeight: "bold",
   },

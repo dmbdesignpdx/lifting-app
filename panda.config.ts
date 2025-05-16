@@ -18,6 +18,10 @@ export default defineConfig({
       height: 0,
       overflow: "hidden",
     },
+    body: {
+      backgroundColor: "background",
+      color: "background.text",
+    },
   },
   conditions: {
     extend: {
@@ -63,14 +67,14 @@ export default defineConfig({
           surface: {
             DEFAULT: {
               value: {
-                base: "{colors.slate.50}",
-                _osDark: "{colors.slate.800}",
+                base: "{colors.zinc.50}",
+                _osDark: "{colors.zinc.900}",
               },
               description: "A level above background, like a card or a modal.",
             },
             text: {
               value: {
-                base: "{colors.neutral.800}",
+                base: "{colors.neutral.900}",
                 _osDark: "{colors.neutral.50}",
               },
               description: "The text color on a surface.",
@@ -80,19 +84,22 @@ export default defineConfig({
             DEFAULT: {
               value: {
                 base: "{colors.zinc.100}",
-                _osDark: "{colors.zinc.800}",
+                _osDark: "{colors.zinc.950}",
               },
               description: "A lowest level, like the body or a container.",
             },
             text: {
-              value: { base: "{colors.neutral.900}", _osDark: "" },
+              value: {
+                base: "{colors.neutral.950}",
+                _osDark: "{colors.neutral.100}",
+              },
               description: "The text color on a background.",
             },
           },
           border: {
             value: {
-              base: "{colors.slate.200}",
-              _osDark: "{colors.slate.700}",
+              base: "{colors.zinc.200}",
+              _osDark: "{colors.zinc.700}",
             },
           },
         },
