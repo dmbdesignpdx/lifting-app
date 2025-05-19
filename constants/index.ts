@@ -40,3 +40,8 @@ export const INITIAL_DATA = {
   [Lift.Back.NAME]: 0,
   [Lift.Front.NAME]: 0,
 };
+
+export const Url = {
+  BASE: new URL("https://lifting-app.vercel.app"),
+  AUTHOR: new URL("https://danielblake.dev"),
+} as const;

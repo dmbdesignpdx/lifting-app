@@ -2,8 +2,12 @@ import type { NextConfig } from "next";
 
 
 export default {
+  compiler: {
+    reactRemoveProperties: {
+      properties: ["^data-testid$"],
+    },
+  },
   experimental: {
-    optimizeCss: true,
     inlineCss: true,
   },
 } as NextConfig;

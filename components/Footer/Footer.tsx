@@ -1,7 +1,7 @@
 import type { FooterProps as Props } from "./types.d";
 import * as style from "./Footer.styles";
 import { Link } from "@/components/Link";
-
+import { Url } from "@/constants";
 
 export function Footer({}: Props) {
 
@@ -12,7 +12,7 @@ export function Footer({}: Props) {
           Made with 🦄🌈 by
           {" "}
           <Link
-            href="https://danielblake.dev"
+            href={Url.AUTHOR.origin}
             label="Daniel Blake"
             newTab
           />

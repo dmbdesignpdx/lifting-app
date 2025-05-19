@@ -6,7 +6,7 @@ import { Geist_Mono } from "next/font/google";
 // Ours
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Label } from "@/constants";
+import { Label, Url } from "@/constants";
 import "./globals.css";
 
 
@@ -17,8 +17,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: Url.BASE,
   title: Label.HEADING,
   description: "A simple calculator for Olympic lifting",
+  authors: [{ name: "Daniel Blake", url: Url.AUTHOR.origin }],
+  formatDetection: {
+    email: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: Url.AUTHOR.pathname,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+  },
 };
 
 export const viewport: Viewport = {
