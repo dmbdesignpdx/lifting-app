@@ -1,7 +1,7 @@
 "use client";
 
 
-import type { LiftState } from "@/types/main";
+import type { LiftState } from "@/constants";
 import {
   Lift,
   INITIAL_DATA,
@@ -14,10 +14,10 @@ type LiftStateFunctions = [typeof getter, typeof setter];
 
 function setter(_: LiftState, formData: FormData): LiftState {
   const data = ({
-    [Lift.Snatch.NAME]: Number(formData.get(Lift.Snatch.NAME)) || 0,
-    [Lift.Clean.NAME]: Number(formData.get(Lift.Clean.NAME)) || 0,
-    [Lift.Back.NAME]: Number(formData.get(Lift.Back.NAME)) || 0,
-    [Lift.Front.NAME]: Number(formData.get(Lift.Front.NAME)) || 0,
+    [Lift.SNATCH]: Number(formData.get(Lift.SNATCH)) || 0,
+    [Lift.CLEAN]: Number(formData.get(Lift.CLEAN)) || 0,
+    [Lift.BACK]: Number(formData.get(Lift.BACK)) || 0,
+    [Lift.FRONT]: Number(formData.get(Lift.FRONT)) || 0,
   });
 
   if (typeof window !== "undefined") {

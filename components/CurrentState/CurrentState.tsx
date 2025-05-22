@@ -1,8 +1,6 @@
 import type { CurrentStateProps as Props } from "./types.d";
 import * as style from "./CurrentState.styles";
-import { Lift } from "@/constants";
-
-const lifts = Object.values(Lift);
+import { LIFTS, Label } from "@/constants";
 
 
 export function CurrentState({ state }: Props) {
@@ -10,16 +8,16 @@ export function CurrentState({ state }: Props) {
   return (
     <article
       className={style.root}
-      aria-labelledby="article"
+      aria-labelledby="article-heading"
     >
-      <h3 id="article">Current PRs</h3>
+      <h3 id="article-heading">{Label.CURRENT_HEADER}</h3>
       <ul>
 
-        {lifts.map(lift => (
-          <li key={lift.NAME}>
-            {lift.NAME} ({lift.ICON}):
-            {" "}
-            <span>{state[lift.NAME]}kg</span>
+        {LIFTS.map(lift => (
+          <li key={lift}>
+            {lift}
+            {": "}
+            <span>{state[lift]}kg</span>
           </li>
         ))}
 

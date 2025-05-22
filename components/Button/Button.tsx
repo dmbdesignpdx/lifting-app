@@ -7,6 +7,8 @@ export function Button({
   type,
   variant,
   onClick,
+  formAction,
+  disabled,
 }: Props) {
   if (!label) return null;
 
@@ -17,6 +19,8 @@ export function Button({
       className={className}
       type={type}
       onClick={onClick}
+      formAction={formAction}
+      disabled={disabled || undefined}
     >
       {label}
     </button>

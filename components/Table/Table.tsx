@@ -1,71 +1,80 @@
-import type { TableProps as Props } from "./types.d";
-import * as style from "./Table.styles";
-import { Label, PERCENTAGES, Lift } from "@/constants";
+import type { TableProps as Props } from "./types";
 import type { LiftData } from "@/types/main";
+import * as style from "./Table.styles";
+import {
+  Label,
+  PERCENTAGES,
+  Lift,
+  TABLE_HEADERS,
+} from "@/constants";
 import { getNewMax, getPercentage } from "@/lib";
 
 
-const SnatchName = Lift.Snatch.NAME;
-const CleanName = Lift.Clean.NAME;
-const BackName = Lift.Back.NAME;
-const FrontName = Lift.Front.NAME;
+const {
+  SNATCH,
+  CLEAN,
+  BACK,
+  FRONT,
+} = Lift;
 
 
 export function Table({ state }: Props) {
   function getValues(): LiftData {
-    const snatchMax = getNewMax(state[SnatchName]);
-    const cleanJerkMax = getNewMax(state[CleanName]);
-    const backSquatMax = getNewMax(state[BackName]);
-    const frontSquatMax = getNewMax(state[FrontName]);
+    const snatchMax = getNewMax(state[SNATCH]);
+    const cleanJerkMax = getNewMax(state[CLEAN]);
+    const backSquatMax = getNewMax(state[BACK]);
+    const frontSquatMax = getNewMax(state[FRONT]);
 
     return PERCENTAGES.map(item => {
       return {
         label: item === 100 ? Label.GOAL :`${item}%`,
         lift: {
-          [SnatchName]: getPercentage(snatchMax, item),
-          [CleanName]: getPercentage(cleanJerkMax, item),
-          [BackName]: getPercentage(backSquatMax, item),
-          [FrontName]: getPercentage(frontSquatMax, item),
+          [SNATCH]: getPercentage(snatchMax, item),
+          [CLEAN]: getPercentage(cleanJerkMax, item),
+          [BACK]: getPercentage(backSquatMax, item),
+          [FRONT]: getPercentage(frontSquatMax, item),
         },
       };
     });
   }
 
   return (
-    <article
-      className={style.container}
-      aria-labelledby="table-heading"
+    <table
+      className={style.root}
+      aria-live="assertive"
+      aria-label="Table"
     >
-      <h3 id="table-heading">{Label.AMOUNTS}</h3>
-      <table
-        className={style.root}
-        aria-live="assertive"
-        aria-label="Table"
-      >
-        <thead aria-label={Label.TABLE_HEADER}>
-          <tr>
-            <th>{Label.BREAKDOWN}</th>
-            <th>{Lift.Snatch.ICON}</th>
-            <th>{Lift.Clean.ICON}</th>
-            <th>{Lift.Back.ICON}</th>
-            <th>{Lift.Front.ICON}</th>
-          </tr>
-        </thead>
-        <tbody aria-label={Label.TABLE_BODY}>
-          {getValues().map(i => (
-            <tr
-              key={i.label}
-              className={style.cell}
+      <caption>{Label.AMOUNTS}</caption>
+      <thead aria-label={Label.TABLE_HEADER}>
+        <tr>
+
+          {TABLE_HEADERS.map(item => (
+            <th
+              key={item}
+              scope="col"
             >
-              <td>{i.label}</td>
-              <td>{i.lift[SnatchName]}kg</td>
-              <td>{i.lift[CleanName]}kg</td>
-              <td>{i.lift[BackName]}kg</td>
-              <td>{i.lift[FrontName]}kg</td>
-            </tr>
+              {item}
+            </th>
           ))}
-        </tbody>
-      </table>
-    </article>
+
+        </tr>
+      </thead>
+      <tbody aria-label={Label.TABLE_BODY}>
+
+        {getValues().map(i => (
+          <tr
+            key={i.label}
+            className={style.cell}
+          >
+            <td>{i.label}</td>
+            <td>{i.lift[SNATCH]}kg</td>
+            <td>{i.lift[CLEAN]}kg</td>
+            <td>{i.lift[BACK]}kg</td>
+            <td>{i.lift[FRONT]}kg</td>
+          </tr>
+        ))}
+
+      </tbody>
+    </table>
   );
 }

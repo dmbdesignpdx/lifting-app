@@ -3,45 +3,49 @@ export const PERCENTAGES =
 export const LOCAL_KEY = "_lifting-data_";
 
 export const Lift = {
-  Snatch: {
-    NAME: "Snatch",
-    ICON: "🍕",
-  },
-  Clean: {
-    NAME: "Clean & Jerk",
-    ICON: "🌮",
-  },
-  Back: {
-    NAME: "Back Squat",
-    ICON: "🥪",
-  },
-  Front: {
-    NAME: "Front Squat",
-    ICON: "🌭",
-  },
+  SNATCH: "Snatch",
+  CLEAN: "Clean & Jerk",
+  BACK: "Back Squat",
+  FRONT: "Front Squat",
 } as const;
+
+export const LIFTS = Object.values(Lift);
+
+export type LiftType = typeof LIFTS[number];
+
+export type LiftState = {
+  [key in LiftType]: number;
+};
 
 export const Label = {
   GOAL: "GOAL",
-  BREAKDOWN: "Breakdown",
+  BREAKDOWN: "(Scale)",
   PROMPT: "Start by entering your current PRs",
   CALCULATE: "Calculate",
   HEADING: "Olympic Lifting Calculator",
-  SHOW_CALC: "Show Calculator",
-  HIDE_CALC: "Hide Calculator",
+  SHOW_CALC: "Show Inputs",
+  HIDE_CALC: "Hide Inputs",
   AMOUNTS: "Amounts",
   TABLE_HEADER: "Table Header",
   TABLE_BODY: "Table Body",
+  FORM_HEADER: "Enter your current PRs for...",
+  CURRENT_HEADER: "Your Current PRs",
 } as const;
 
-export const INITIAL_DATA = {
-  [Lift.Snatch.NAME]: 0,
-  [Lift.Clean.NAME]: 0,
-  [Lift.Back.NAME]: 0,
-  [Lift.Front.NAME]: 0,
-};
+export const INITIAL_DATA = LIFTS.reduce((state, current) => {
+  return {
+    ...state,
+    [current]: 0,
+  };
+}, {} as LiftState);
 
 export const Url = {
   BASE: new URL("https://lifting-app.vercel.app"),
   AUTHOR: new URL("https://danielblake.dev"),
 } as const;
+
+
+export const TABLE_HEADERS = [
+  Label.BREAKDOWN,
+  ...LIFTS.map(item => item),
+] as const;

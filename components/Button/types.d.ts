@@ -4,4 +4,6 @@ export interface ButtonProps {
   children?: never;
   variant?: "solid" | "text" | "gradient";
   onClick?: () => void;
+  formAction?: (payload: FormData) => void;
+  disabled?: boolean;
 }

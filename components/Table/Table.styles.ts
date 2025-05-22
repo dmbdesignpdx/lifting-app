@@ -6,6 +6,11 @@ export const root = css({
   inlineSize: "100%",
   textAlign: "left",
   tableLayout: "fixed",
+  marginBlockStart: 12,
+
+  "& caption": {
+    textAlign: "left",
+  },
 
   "& tr": {
     borderBottom: "1px solid {colors.border}",
@@ -15,15 +20,27 @@ export const root = css({
     fontSize: "0.75rem",
     paddingBlock: 4,
   },
-});
 
-export const container = css({
-  marginBlockStart: 12,
+  "& th:not(:first-of-type)": {
+    paddingInlineStart: 2,
+  },
+
+  "& th:not(:last-of-type)": {
+    paddingInlineEnd: 2,
+  },
 });
 
 export const cell = css({
   "& td": {
     paddingBlock: 4,
+  },
+
+  "& td:not(:first-of-type)": {
+    paddingInlineStart: 2,
+  },
+
+  "& td:not(:last-of-type)": {
+    paddingInlineEnd: 2,
   },
 
   "&:first-of-type": {

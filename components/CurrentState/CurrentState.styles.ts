@@ -18,6 +18,6 @@ export const root = css({
   },
 
   "& span": {
-    fontWeight: "bold",
+    fontWeight: "900",
   },
 });

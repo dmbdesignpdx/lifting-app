@@ -1,7 +1,5 @@
-import { INITIAL_DATA } from "@/constants";
+import { type LiftState } from "@/constants";
 
-
-export type LiftState = typeof INITIAL_DATA;
 
 export interface LiftGroup {
   label: string;

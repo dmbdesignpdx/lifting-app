@@ -8,22 +8,26 @@ import { Button } from "@/components/Button";
 export function Form({ action }: Props) {
 
   return (
-    <section>
-      <h3 className={style.heading}>Enter your current PRs</h3>
-      <form
-        className={style.root}
-        action={action}
-        data-testid="form"
+    <form
+      className={style.root}
+      action=""
+      aria-labelledby="form-heading"
+    >
+      <h3
+        id="form-heading"
+        className={style.heading}
       >
-        <Input label={Lift.Snatch.NAME} />
-        <Input label={Lift.Clean.NAME} />
-        <Input label={Lift.Back.NAME} />
-        <Input label={Lift.Front.NAME} />
-        <Button
-          label={Label.CALCULATE}
-          variant="gradient"
-        />
-      </form>
-    </section>
+        {Label.FORM_HEADER}
+      </h3>
+      <Input label={Lift.SNATCH} />
+      <Input label={Lift.CLEAN} />
+      <Input label={Lift.BACK} />
+      <Input label={Lift.FRONT} />
+      <Button
+        formAction={action}
+        label={Label.CALCULATE}
+        variant="gradient"
+      />
+    </form>
   );
 }

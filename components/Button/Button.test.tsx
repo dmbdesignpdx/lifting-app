@@ -11,36 +11,15 @@ const props: ButtonProps = {
 };
 
 
-describe("Button", () => {
-  test("renders correctly", async () => {
-    render(<Button {...props} />);
-
-    const root = await screen.findByRole("button");
-
-    expect(root).toHaveTextContent(props.label);
-    expect(root).not.toHaveAttribute("type");
-  });
-
-  test("will not render without label", () => {
-    render(<Button label="" />);
+describe("Button Component", () => {
+  test("renders as expected", () => {
+    const { rerender } = render(<Button {...props} />);
 
     const root = screen.queryByRole("button");
 
-    expect(root).not.toBeInTheDocument();
-  });
-
-  test("renders its types", async () => {
-    const { rerender }  = render(
-      <Button
-        {...props}
-        type="submit"
-      />,
-    );
-
-    const root = await screen.findByText(props.label);
-
-    expect(root).toHaveAttribute("type", "submit");
-    expect(root).not.toHaveAttribute("type", "button");
+    expect(root).toBeInTheDocument();
+    expect(root).toHaveTextContent(props.label);
+    expect(root).not.toHaveAttribute("type");
 
     rerender(
       <Button
@@ -51,9 +30,14 @@ describe("Button", () => {
 
     expect(root).toHaveAttribute("type", "button");
     expect(root).not.toHaveAttribute("type", "submit");
+
+    rerender(<Button label="" />);
+
+    expect(root).not.toBeInTheDocument();
   });
 
-  test("is clickable", async () => {
+
+  test("is interactable", async () => {
     const handleClick = mock(() => undefined);
     const user = userEvent.setup();
 
@@ -64,10 +48,33 @@ describe("Button", () => {
       />,
     );
 
-    const root = await screen.findByText(props.label);
+    const root = screen.getByText(props.label);
+
+    expect(root).not.toBeDisabled();
 
     await user.click(root);
 
     expect(handleClick).toHaveBeenCalled();
+  });
+
+  test("is not interactable while disabled", async () => {
+    const handleClick = mock(() => undefined);
+    const user = userEvent.setup();
+
+    render(
+      <Button
+        {...props}
+        onClick={handleClick}
+        disabled={true}
+      />,
+    );
+
+    const root = screen.getByText(props.label);
+
+    expect(root).toBeDisabled();
+
+    await user.click(root);
+
+    expect(handleClick).not.toHaveBeenCalled();
   });
 });

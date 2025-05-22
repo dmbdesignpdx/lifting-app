@@ -19,7 +19,7 @@ import { Label } from "@/constants";
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const [getLiftState, setLiftState] = useLiftState();
-  const [state, formAction] = useActionState(setLiftState, getLiftState());
+  const [state, formAction, isPending] = useActionState(setLiftState, getLiftState());
   const [showCalc, setShowCalc] = useState(true);
   const buttonLabel = showCalc ? Label.HIDE_CALC : Label.SHOW_CALC;
 
@@ -38,6 +38,7 @@ export default function Home() {
         onClick={handleClick}
         type="button"
         variant="text"
+        disabled={isPending}
       />
       {showCalc && <Form action={formAction} />}
       <CurrentState state={state} />

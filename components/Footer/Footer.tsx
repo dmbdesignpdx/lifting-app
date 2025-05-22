@@ -3,6 +3,7 @@ import * as style from "./Footer.styles";
 import { Link } from "@/components/Link";
 import { Url } from "@/constants";
 
+
 export function Footer({}: Props) {
 
   return (

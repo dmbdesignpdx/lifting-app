@@ -9,7 +9,7 @@ export const root = css({
 
 export const heading = css({
   fontSize: "3xl",
-  fontWeight: "bold",
+  fontWeight: "900",
   lineHeight: "1.1",
   textWrap: "balance",
   bg: "linear-gradient(90deg, {colors.secondary} 10%, {colors.secondary.accent} 90%)",
