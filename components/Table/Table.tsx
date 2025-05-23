@@ -45,7 +45,10 @@ export function Table({ state }: Props) {
       aria-label="Table"
     >
       <caption>{Label.AMOUNTS}</caption>
-      <thead aria-label={Label.TABLE_HEADER}>
+      <thead
+        aria-label={Label.TABLE_HEADER}
+        className={style.header}
+      >
         <tr>
 
           {TABLE_HEADERS.map(item => (
