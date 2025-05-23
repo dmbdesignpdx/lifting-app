@@ -7,18 +7,18 @@ export const root = css({
   textAlign: "left",
   tableLayout: "fixed",
   marginBlockStart: 12,
+  borderCollapse: "separate",
+  borderSpacing: 0,
 
   "& caption": {
     textAlign: "left",
-  },
-
-  "& tr": {
-    borderBottom: "1px solid {colors.border}",
+    marginBottom: 2,
   },
 
   "& th": {
     fontSize: "0.75rem",
     paddingBlock: 4,
+    borderBottom: "2px solid {colors.border}",
   },
 
   "& th:not(:first-of-type)": {
@@ -33,6 +33,7 @@ export const root = css({
 export const cell = css({
   "& td": {
     paddingBlock: 4,
+    borderBottom: "1px solid {colors.border}",
   },
 
   "& td:not(:first-of-type)": {
@@ -47,4 +48,11 @@ export const cell = css({
     fontWeight: "bold",
     color: "secondary",
   },
+});
+
+export const header = css({
+  position: "sticky",
+  insetBlockStart: 0,
+  insetInlineStart: 0,
+  backgroundColor: "background",
 });
