@@ -2,7 +2,7 @@ import { test, expect, mock } from "bun:test";
 import { screen, render } from "@testing-library/react";
 
 import { Form } from "./Form";
-import { Label, Lift } from "@/constants";
+import { Label } from "@/constants";
 
 
 const fn = mock(() => undefined);
