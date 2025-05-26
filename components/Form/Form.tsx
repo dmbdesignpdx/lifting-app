@@ -12,6 +12,7 @@ export function Form({ action }: Props) {
       className={style.root}
       action=""
       aria-labelledby="form-heading"
+      method="get"
     >
       <h3
         id="form-heading"

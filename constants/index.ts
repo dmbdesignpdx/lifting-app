@@ -25,7 +25,7 @@ export const Label = {
   HEADING: "Olympic Lifting Calculator",
   SHOW_CALC: "Show Inputs",
   HIDE_CALC: "Hide Inputs",
-  AMOUNTS: "Amounts",
+  AMOUNTS: "Breakdown of Amounts",
   TABLE_HEADER: "Table Header",
   TABLE_BODY: "Table Body",
   FORM_HEADER: "Enter your current PRs for...",

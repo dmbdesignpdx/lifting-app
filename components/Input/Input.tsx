@@ -1,12 +1,8 @@
 import type { InputProps as Props } from "./types.d";
 import * as style from "./Input.styles";
 
-export function Input({
-  label,
-  max,
-  value,
-  onChange,
-}: Props) {
+
+export function Input({ label }: Props) {
   if (!label) return null;
 
   return (
@@ -17,9 +13,10 @@ export function Input({
         id={label}
         type="number"
         name={label}
-        max={max}
-        value={value}
-        onChange={onChange}
+        placeholder="0"
+        max={300}
+        min={0}
+        maxLength={3}
       />
     </label>
   );
