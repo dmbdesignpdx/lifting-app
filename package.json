@@ -1,10 +1,10 @@
 {
   "name": "lifting-app",
-  "description": "",
-  "version": "0.1.0",
+  "description": "A personal lifting app built with Next.js and Panda CSS.",
+  "version": "0.2.0",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Daniel Blake",
+    "email": "daniel@danielblake.dev"
   },
   "private": true,
   "scripts": {
@@ -13,29 +13,28 @@
     "build": "next build",
     "serve": "next start",
     "lint": "next lint",
-    "comp": "bun run ./utils/createComponent.ts"
+    "comp": "bun -b run ./utils/createComponent.ts"
   },
   "dependencies": {
-    "critters": "^0.0.25",
-    "next": "15.3.2",
+    "next": "15.3.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@happy-dom/global-registrator": "^17.4.4",
-    "@pandacss/dev": "^0.53.3",
-    "@stylistic/eslint-plugin": "^4.2.0",
+    "@happy-dom/global-registrator": "^18.0.1",
+    "@pandacss/dev": "^0.54.0",
+    "@stylistic/eslint-plugin": "^5.0.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
-    "@types/bun": "^1.2.9",
-    "@types/node": "^22.14.1",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "eslint": "^9.24.0",
-    "eslint-config-next": "15.3.0",
+    "@types/bun": "^1.2.17",
+    "@types/node": "^24.0.4",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.29.0",
+    "eslint-config-next": "15.3.4",
     "jabber": "^1.5.3",
     "typescript": "^5.8.3"
   }

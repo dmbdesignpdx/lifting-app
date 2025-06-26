@@ -46,7 +46,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={`${geistMono.className}`}>
+      <body className={geistMono.className}>
         <Header heading={Label.HEADING} />
         <main data-wrap>{children}</main>
         <Footer />

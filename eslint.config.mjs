@@ -32,7 +32,7 @@ const eslintConfig = [
       "@stylistic/curly-newline": ["error", "always"],
       "@stylistic/dot-location": ["error", "property"],
       "@stylistic/eol-last": "error",
-      "@stylistic/func-call-spacing": "error",
+      "@stylistic/function-call-spacing": "error",
       "@stylistic/function-paren-newline": ["error", "consistent"],
       "@stylistic/implicit-arrow-linebreak": "error",
       "@stylistic/indent": ["error", 2],
