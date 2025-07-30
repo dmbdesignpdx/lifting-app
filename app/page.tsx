@@ -27,7 +27,14 @@ export default function Home() {
     setShowCalc(prev => !prev);
   }
 
-  useEffect(() => void setIsClient(true), []);
+  useEffect(() => {
+    setIsClient(true);
+
+    // TODO: Find a better way to handle this
+    if (state.Snatch !== 0) {
+      setShowCalc(false);
+    }
+  }, [state]);
 
   if (!isClient) return <p>Loading...</p>;
 
