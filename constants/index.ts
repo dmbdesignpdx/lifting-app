@@ -17,9 +17,19 @@ export type LiftState = {
   [key in LiftType]: number;
 };
 
+export const Meta = {
+  NAME: "Olympic Lifting Calculator",
+  SHORT_NAME: "Lifting Calculator",
+  DESCRIPTION: "A simple PR and percentage calculator for Olympic lifting.",
+  BASE: "/",
+  THEME_COLOR: "#a855f7",
+  BKG_COLOR: "#FAFAFA",
+  AUTHOR: "Daniel Blake",
+} as const;
+
 export const Label = {
   GOAL: "GOAL",
-  BREAKDOWN: "(Scale)",
+  BREAKDOWN: "(Step)",
   PROMPT: "Start by entering your current PRs",
   CALCULATE: "Calculate",
   HEADING: "Olympic Lifting Calculator",
