@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-background: light-dark(var(--color-zinc-50), var(--color-zinc-950));
+  --color-foreground: light-dark(var(--color-zinc-950), var(--color-zinc-50));
+  --color-surface: light-dark(var(--color-white), var(--color-zinc-900));
+  --color-surface-foreground: light-dark(var(--color-zinc-900), var(--color-white));
+  --color-primary: var(--color-purple-500);
+  --color-primary-action: var(--color-purple-400);
+  --color-primary-accent: var(--color-pink-500);
+  --color-secondary: var(--color-teal-500);
+  --color-secondary-accent: var(--color-blue-500);
+  --color-border: light-dark(var(--color-zinc-200), var(--color-zinc-700));
+  --color-ring: var(--color-blue-500);
+
+  --font-sans: var(--font-geist-mono);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-geist-mono);
+
+  --size-ui: 2.75rem;
+}
+
+@layer base {
+  html {
+    @apply h-full;
+    color-scheme: light dark;
+    font-size: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-full font-sans bg-background text-foreground antialiased text-[1em];
+  }
+
+  abbr {
+    @apply no-underline;
+  }
+}
+
+@utility wrapper {
+  @apply px-4 inline-full mx-auto max-inline-2xl;
+}
+
+@utility trim {
+  text-box: trim-both cap alphabetic;
+}
+
+@utility legible {
+  text-rendering: optimizeLegibility;
+}

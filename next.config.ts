@@ -1,13 +1,27 @@
 import type { NextConfig } from "next";
 
-
-export default {
-  compiler: {
-    reactRemoveProperties: {
-      properties: ["^data-testid$"],
-    },
-  },
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
   experimental: {
     inlineCss: true,
+    agentFeedback: false,
+    useTypeScriptCli: true,
+    globalNotFound: true,
+    turbopackRustReactCompiler: true,
   },
-} as NextConfig;
+  cacheComponents: true,
+  partialPrefetching: false,
+  reactCompiler: true,
+  trailingSlash: false,
+  turbopack: {
+    root: process.cwd(),
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  },
+};
+
+export default nextConfig;

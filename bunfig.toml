@@ -1,2 +1,5 @@
 [test]
-preload = ["./bun/happy-dom.ts", "./bun/testing-library.ts"]
+root = "src/__tests__"
+preload = ["./src/__tests__/_setup/happydom.ts", "./src/__tests__/_setup/testing-library.ts"]
+smol = true
+timeout = 4000
