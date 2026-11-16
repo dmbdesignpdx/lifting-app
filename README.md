@@ -1,5 +1,7 @@
 # Olympic Lifting Calculator
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa09746e-d306-4d72-9d89-2cd049ee9cd9/deploy-status)](https://app.netlify.com/projects/olympic-lift/deploys)
+
 A progressive web app for Olympic lifters. Enter your PRs for the Snatch, Clean & Jerk, Back Squat
 and Front Squat, and get a table of working weights from 100% down to 50% in 5% steps.
 
@@ -14,16 +16,16 @@ bun i
 bun run dev     # http://localhost:3000
 ```
 
-| Command            | What it does                                      |
-| ------------------ | ------------------------------------------------- |
-| `bun run dev`      | Start the Next.js dev server                      |
-| `bun run build`    | Production build                                  |
-| `bun run start`    | Serve the production build                        |
-| `bun run lint`     | Biome check                                       |
-| `bun run format`   | Biome format (writes changes)                     |
-| `bun test`         | Run tests affected by changes (`bun test --changed`) |
-| `bun run test:watch` | Run tests in watch mode                         |
-| `bun run comp Name -e section` | Scaffold a component and its test     |
+| Command                        | What it does                                         |
+| ------------------------------ | ---------------------------------------------------- |
+| `bun run dev`                  | Start the Next.js dev server                         |
+| `bun run build`                | Production build                                     |
+| `bun run start`                | Serve the production build                           |
+| `bun run lint`                 | Biome check                                          |
+| `bun run format`               | Biome format (writes changes)                        |
+| `bun test`                     | Run tests affected by changes (`bun test --changed`) |
+| `bun run test:watch`           | Run tests in watch mode                              |
+| `bun run comp Name -e section` | Scaffold a component and its test                    |
 
 ## Stack
 
