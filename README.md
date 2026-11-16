@@ -1,5 +1,7 @@
 # Olympic Lifting Calculator
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa09746e-d306-4d72-9d89-2cd049ee9cd9/deploy-status)](https://app.netlify.com/projects/olympic-lift/deploys)
+
 A progressive web app for Olympic lifters. Enter your PRs for the Snatch, Clean & Jerk, Back Squat
 and Front Squat, and get a table of working weights from 100% down to 50% in 5% steps.
 
