@@ -13,7 +13,7 @@ import { useLocalStorage } from "@/hooks/use-lift-state";
 export default function Home() {
   const [storageState, setStorageState] = useLocalStorage();
   const liftState = JSON.parse(storageState) as LiftState;
-  const [showCalc, setShowCalc] = useState(true);
+  const [showCalc, setShowCalc] = useState(false);
   const buttonLabel = showCalc ? label.hideCalc : label.showCalc;
 
   function handleClick() {
