@@ -16,16 +16,16 @@ bun i
 bun run dev     # http://localhost:3000
 ```
 
-| Command            | What it does                                      |
-| ------------------ | ------------------------------------------------- |
-| `bun run dev`      | Start the Next.js dev server                      |
-| `bun run build`    | Production build                                  |
-| `bun run start`    | Serve the production build                        |
-| `bun run lint`     | Biome check                                       |
-| `bun run format`   | Biome format (writes changes)                     |
-| `bun test`         | Run tests affected by changes (`bun test --changed`) |
-| `bun run test:watch` | Run tests in watch mode                         |
-| `bun run comp Name -e section` | Scaffold a component and its test     |
+| Command                        | What it does                                         |
+| ------------------------------ | ---------------------------------------------------- |
+| `bun run dev`                  | Start the Next.js dev server                         |
+| `bun run build`                | Production build                                     |
+| `bun run start`                | Serve the production build                           |
+| `bun run lint`                 | Biome check                                          |
+| `bun run format`               | Biome format (writes changes)                        |
+| `bun test`                     | Run tests affected by changes (`bun test --changed`) |
+| `bun run test:watch`           | Run tests in watch mode                              |
+| `bun run comp Name -e section` | Scaffold a component and its test                    |
 
 ## Stack
 
